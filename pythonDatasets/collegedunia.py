@@ -30,15 +30,14 @@ with open('links.txt', 'r') as file:
         university = ' '.join(university)
 
         for row in rows:
-            program = row.find('a', class_='jsx-470804739')
-            deadline = row.find('span', class_='jsx-470804739 text-capitalize')
-            fees = row.find('span', class_='jsx-470804739 fee-total font-weight-bold text-black')
+            program = row.find('a', class_='jsx-2775229226 d-block hover-underline')
+            deadline = row.find('span', class_='jsx-2775229226 text-capitalize')
+            fees = row.find('span', class_='jsx-2775229226 fee-total text-base font-weight-medium text-title text-nowrap')
 
-            scores = row.find_all('span', class_='jsx-470804739 font-weight-bold')
-            toefl_score = scores[0].text if len(scores) > 0 else ''
-            gre_score = scores[2].text if len(scores) > 2 else ''
-            gmat_score = scores[3].text if len(scores) > 3 else ''
-            ielts_score = scores[1].text if len(scores) > 1 else ''
+            ielts_score = soup.find('span', text='IELTS<!-- -->:').find_next('span', class_='jsx-2775229226 text-title font-weight-medium').text if soup.find('span', text='IELTS<!-- -->:') else ''
+            gmat_score = soup.find('span', text='GMAT<!-- -->:').find_next('span', class_='jsx-2775229226 text-title font-weight-medium').text if soup.find('span', text='GMAT<!-- -->:') else ''
+            gre_score = soup.find('span', text='GRE<!-- -->:').find_next('span', class_='jsx-2775229226 text-title font-weight-medium').text if soup.find('span', text='GRE<!-- -->:') else ''
+            toefl_score = soup.find('span', text='TOEFL<!-- -->:').find_next('span', class_='jsx-2775229226 text-title font-weight-medium').text if soup.find('span', text='TOEFL<!-- -->:') else ''
 
             program_data.append({
                 'University': university,
