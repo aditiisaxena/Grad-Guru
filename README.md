@@ -1,6 +1,6 @@
 # Grad-Guru
 ## Introduction
-Grad Guru is a comprehensive 'College Decision Support System' designed to simplify and streamline the college selection process for students globally. This README provides an overview of the project, its objectives, features, and technical aspects.
+Grad Guru is a comprehensive 'College Decision Support System' designed to simplify and streamline the college selection process for students globally. This README overviews the project, objectives, features, and technical aspects.
 ## Table of Contents
 - [Grad-Guru](#grad-guru)
   - [Introduction](#introduction)
@@ -16,7 +16,7 @@ Grad Guru is a comprehensive 'College Decision Support System' designed to simpl
   - [Data Management](#data-management)
   - [Prerequisites](#prerequisites)
 ## Problem Statement
-In the modern, globalized world, students often find it challenging to select the right institution and program of study due to the overwhelming amount of information available. Grad Guru aims to provide a one-stop solution by integrating data from colleges worldwide, assisting students in making informed decisions.
+In the modern, globalized world, students often find it challenging to select the right institution and program due to the overwhelming amount of information available. Grad Guru aims to provide a one-stop solution by integrating data from colleges worldwide and assisting students in making informed decisions.
 ## Use Case
 The application offers several features:
 1. User Registration: Creation of user accounts with essential information.
@@ -35,15 +35,15 @@ Stakeholders include students, parents, colleges/universities, educational couns
 Open Source Tools & Data Persistence Software:
 1. Beautiful Soup: Web scraping tool for data extraction.
 2. Pandas: Data processing and transformation.
-3. PostgreSQL: Database management system for data storage and retrieval.
+3. PostgreSQL: A database management system for data storage and retrieval.
 ## Data Sources
 The project utilizes datasets from platforms like Kaggle, Education.com, and Collegedunia.com, covering aspects like university rankings, program details, fee structures, and more. Additionally, the News API is used to fetch relevant news articles.
 ## Schema Matching & Mapping
-Scripts have been developed for college search, program search, fee structure mapping, admission requirements mapping, and salary expectation mapping. These scripts employ linguistic matching algorithms and SQL queries to extract relevant data from the database.
+Scripts have been developed for college searches, program searches, fee structure mapping, admission requirements mapping, and salary expectation mapping. These scripts employ linguistic matching algorithms and SQL queries to extract relevant data from the database.
 ## ETL/Data Exchange/Propagation
 The Extract, Transform, Load (ETL) process involves:
 1. Extract: Data extraction from sources like CSV files.
-2. Transform: Data cleaning and processing.
+2. Transform Data cleaning and processing.
 3. Load: Loading transformed data into the PostgreSQL database.
 Data exchange is automated using the Windows Task Scheduler, ensuring timely updates.
 ## Data Management
